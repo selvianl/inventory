@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<body>
+    <h2>Furnitures</h2>
+    <table>
+    <tr>
+        <td>Furniture </td>
+        <td>Price</td>
+    </tr>
+    {% for object in object_list %}
+        <tr>
+    <td>{{object.name}}</td>
+    <td>{{object.price}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br>
+<h2>Total Furniture Amount</h2>
+    <table>
+    <tr>
+        <td>Furnitures</td>
+        <td>Total<br> Furniture</td>
+    </tr>
+    <tr>
+{% for key, value in totals.items %} 
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+{% endfor %}
+    </table>
+
+</body>
+{% endblock %}
+

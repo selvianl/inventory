@@ -31,6 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'dashboard',
+    'dashboard.room',
+    'dashboard.building',
+    'dashboard.area',
+    'dashboard.furniture',
+    'api',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,13 +80,17 @@ WSGI_APPLICATION = 'inventory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': os.environ.get("DATABASE_ENGINE", 'django.db.backends.mysql'),
+        'NAME': os.environ.get("DATABASE_NAME", None),
+        'USER': os.environ.get("DATABASE_USER", None),
+        'PASSWORD': os.environ.get("DATABASE_PASSWORD", None),
+        'HOST': os.environ.get("DATABASE_HOST", None),
+        'PORT': os.environ.get("DATABASE_PORT", None),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

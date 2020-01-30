@@ -1,0 +1,6 @@
+export DATABASE_ENGINE=django.db.backends.postgresql_psycopg2
+export DATABASE_NAME=inventory_test
+export DATABASE_USER=selvianl
+export DATABASE_PASSWORD=selvianl123
+export DATABASE_HOST=localhost
+#superuser inventory
