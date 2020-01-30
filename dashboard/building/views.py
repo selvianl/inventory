@@ -13,7 +13,7 @@ class BuildingIndexView(ListView):
         total ={}
         for building_name in building_names:
             amount = buildings.filter(name=building_name[0]).values_list(
-            'rooms__areas__furnitures__name').count()
+            'furnitures__name').count()
             total[building_name[0]] = amount
         context['totals'] =total
         return context

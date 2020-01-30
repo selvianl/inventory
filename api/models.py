@@ -6,29 +6,33 @@ class Furniture(models.Model):
     price = models.PositiveIntegerField()
 
     def __str__(self):
-        return u'%s / %s ' % (self.name, self.price)
+        return u'%s' % (self.name)
+
 
 class Area(models.Model):
     name = models.CharField(max_length=100)
-    furnitures = models.ForeignKey(Furniture, on_delete=models.CASCADE)
-
 
     def __str__(self):
-        return u'%s / %s ' % (self.name, self.furnitures)
+        return u'%s' % (self.name)
 
 
 class Room(models.Model):
     number = models.PositiveIntegerField()
-    areas = models.ForeignKey(Area, on_delete=models.CASCADE)
-
 
     def __str__(self):
-        return u'%s / %s ' % (self.number, self.areas)
+        return u'%s' % (self.number)
 
 
 class Building(models.Model):
     name = models.CharField(max_length=25)
-    rooms = models.ForeignKey(Room, on_delete=models.CASCADE)
+    rooms = models.ManyToManyField(Room)
+    areas = models.ManyToManyField(Area)
+    furnitures = models.ManyToManyField(Furniture)
+
+
 
     def __str__(self):
-        return u'%s / %s ' % (self.name, self.rooms)
+        room = " ".join(str(seg) for seg in self.rooms.all())
+        area = " ".join(str(seg) for seg in self.areas.all())
+        furniture = " ".join(str(seg) for seg in self.furnitures.all())
+        return u'%s / %s / %s / %s ' % (self.name, room, area,furniture)
