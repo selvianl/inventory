@@ -1,20 +1,23 @@
 from django.shortcuts import render
-from django.views.generic import ListView
 from api.models import Furniture
+from dashboard.views import BaseIndexView
+from django.db.models import Count
 
-
-class FurnitureIndexView(ListView):
+class FurnitureIndexView(BaseIndexView):
     model = Furniture
     template_name = "furniture/list.html"
+    filter_by = 'building__furnitures__name'
+    filter_tag = 'name'
 
-    def get_context_data(self):
-        context = super(FurnitureIndexView, self).get_context_data()
-        furnitures = context['furniture_list']
-        furniture_names = furnitures.values_list('name').distinct()
-        total ={}
-        for furniture_name in furniture_names:
-            amount = furnitures.filter(name=furniture_name[0]).values_list(
-            'name').count()
-            total[furniture_name[0]] = amount
+    def get_context_data(self, *args, **kwargs):
+        context = super(FurnitureIndexView, self).get_context_data(*args, **kwargs)
+        total={}
+        objs = context['object_list'][0]
+        obj_tags = context['object_list'][1]
+        for obj_tag in obj_tags:
+            import ipdb
+            ipdb.set_trace()
+            amount = objs.filter(name=obj_tag[0]).aggregate(total=Count(self.filter_by))
+            total[obj_tag[0]] = amount.get('total')
         context['totals'] =total
         return context

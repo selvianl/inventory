@@ -1,20 +1,22 @@
 from django.shortcuts import render
-from django.views.generic import ListView
 from api.models import Area
+from dashboard.views import BaseIndexView
+from django.db.models import Count
 
-
-class AreaIndexView(ListView):
+class AreaIndexView(BaseIndexView):
     model = Area
     template_name = "area/list.html"
+    filter_by = 'building__furnitures__name'
+    filter_tag = 'name'
 
-    def get_context_data(self):
-        context = super(AreaIndexView, self).get_context_data()
-        areas = context['area_list']
-        area_names = areas.values_list('name').distinct()
-        total ={}
-        for area_name in area_names:
-            amount = areas.filter(name=area_name[0]).values_list(
-            'furnitures__name').count()
-            total[area_name[0]] = amount
+    def get_context_data(self, *args, **kwargs):
+        context = super(AreaIndexView, self).get_context_data(*args, **kwargs)
+        total={}
+        objs = context['object_list'][0]
+        obj_tags = context['object_list'][1]
+        for obj_tag in obj_tags:
+            amount = objs.filter(name=obj_tag[0]).aggregate(total=Count(self.filter_by))
+            total[obj_tag[0]] = amount.get('total')
         context['totals'] =total
+        context['object_list'] = objs
         return context

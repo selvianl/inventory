@@ -1,24 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 <body>
-    <h2>Areas</h2>
-    <table>
-        <tr>
-            <td>Area</td>
-            <td>Furniture </td>
-            <td>Price</td>
-        </tr>
-    {% for object in object_list %}
-        <tr>
-            <td>{{object.name}}</td>
-            <td>{{object.furnitures.name}}</td>
-            <td>{{object.furnitures.price}}</td>
-        </tr>
-    {% endfor %}
-    </table>
-
-</table>
-<br>
 <h2>Total Furniture Amount</h2>
     <table>
     <tr>

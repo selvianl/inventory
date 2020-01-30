@@ -1,19 +1,25 @@
 from django.shortcuts import render
 from api.models import Building
 from django.views.generic import ListView
+from dashboard.views import BaseIndexView
+from django.db.models import Count
 
-class BuildingIndexView(ListView):
+
+class BuildingIndexView(BaseIndexView):
     model = Building
+    filter_tag = 'name'
     template_name = "building/list.html"
+    filter_by = 'furnitures__name'
 
-    def get_context_data(self):
-        context = super(BuildingIndexView, self).get_context_data()
-        buildings = context['building_list']
-        building_names = buildings.values_list('name').distinct()
-        total ={}
-        for building_name in building_names:
-            amount = buildings.filter(name=building_name[0]).values_list(
-            'furnitures__name').count()
-            total[building_name[0]] = amount
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(BuildingIndexView, self).get_context_data(*args, **kwargs)
+        total={}
+        objs = context['object_list'][0]
+        obj_tags = context['object_list'][1]
+        for obj_tag in obj_tags:
+            amount = objs.filter(name=obj_tag[0]).aggregate(total=Count(self.filter_by))
+            total[obj_tag[0]] = amount.get('total')
         context['totals'] =total
+        context['object_list'] = objs
         return context
