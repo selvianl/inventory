@@ -2,6 +2,7 @@
 {% block content %}
 <body>
     <h2>Buildings</h2>
+
 <table>
     <tr>
         <td>Name</td>
@@ -12,26 +13,38 @@
     </tr>
 {% for object in object_list %}
     <tr>
+
 <td>{{object.name}}</td>
+
+<td>
 {% for room in object.rooms.all %}
-<td>{{room.number}}</td>
+{{room.number}}<br>
 {% endfor %}
+</td>
+
+<td>
 {% for area in object.areas.all %}
-<td>{{area.name}}</td>
+{{area.name}}<br>
 {% endfor %}
+</td>
+
+
 <td>
 {% for furniture in object.furnitures.all %}
 {{furniture.name}}<br>
 {% endfor %}
 </td>
+
+
 <td>
 {% for furniture in object.furnitures.all %}
 {{furniture.price}}<br>
 {% endfor %}
 </td>
-    </tr>
+</tr>
 {% endfor %}
 </table>
+
 <br>
 <h2>Total Furniture Amount</h2>
     <table>

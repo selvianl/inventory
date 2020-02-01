@@ -22,6 +22,7 @@ from dashboard.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('api/', include('api.urls')),
     path('dashboard/', include(('dashboard.building.urls', 'dashboard.building'), namespace="building")),
     path('dashboard/', include(('dashboard.area.urls', 'dashboard.area'), namespace="area")),
     path('dashboard/', include(('dashboard.furniture.urls', 'dashboard.furniture'), namespace="furniture")),

@@ -29,8 +29,6 @@ class Building(models.Model):
     areas = models.ManyToManyField(Area)
     furnitures = models.ManyToManyField(Furniture)
 
-
-
     def __str__(self):
         room = " ".join(str(seg) for seg in self.rooms.all())
         area = " ".join(str(seg) for seg in self.areas.all())
