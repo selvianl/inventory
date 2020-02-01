@@ -14,7 +14,7 @@ import os
 import dj_database_url
 
 SECRET_KEY = 'yltsj-b&p5z+*w#1+s@tx*-hv=s^)4&@sp-h_8k3%jsb3_q87%'
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -101,6 +101,9 @@ DATABASES = {
         'PORT': os.environ.get("DATABASE_PORT", '5432'),
     }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 REST_FRAMEWORK = {
 
