@@ -37,7 +37,14 @@ INSTALLED_APPS = [
     'dashboard.area',
     'dashboard.furniture',
     'api',
+    'rest_auth',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth.registration',
+    'allauth.socialaccount',
+    'allauth',
+    'allauth.account',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,7 +90,7 @@ WSGI_APPLICATION = 'inventory.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get("DATABASE_ENGINE", 'django.db.backends.mysql'),
+        'ENGINE': os.environ.get("DATABASE_ENGINE", 'django.db.backends.postgresql_psycopg2'),
         'NAME': os.environ.get("DATABASE_NAME", None),
         'USER': os.environ.get("DATABASE_USER", None),
         'PASSWORD': os.environ.get("DATABASE_PASSWORD", None),
@@ -92,6 +99,19 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
+
+SITE_ID=1
+ACCOUNT_EMAIL_REQUIRED = False
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

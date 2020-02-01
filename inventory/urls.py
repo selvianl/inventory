@@ -20,6 +20,8 @@ from django.conf  import settings
 
 from dashboard.views import index
 urlpatterns = [
+    path('rest-auth/', include('rest_auth.urls')),
+    path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
     path('', index, name='index'),
     path('api/', include('api.urls')),

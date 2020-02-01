@@ -3,14 +3,17 @@ from rest_framework import generics, status
 from api.models import *
 from api.serializers import (FurnitureSerializer, AreaSerializer,
                              RoomSerializer, BuildingSerializer)
+from rest_framework.authentication import TokenAuthentication
 
 
 class FurnitureView(generics.ListCreateAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = FurnitureSerializer
     queryset = Furniture.objects.all()
 
 
 class FurnitureUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = FurnitureSerializer
     queryset = Furniture.objects.all()
     lookup_field = 'name'
@@ -20,11 +23,13 @@ class FurnitureUpdateView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class AreaView(generics.ListCreateAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = AreaSerializer
     queryset = Area.objects.all()
 
 
 class AreaUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = AreaSerializer
     queryset = Area.objects.all()
     lookup_field = 'name'
@@ -34,11 +39,13 @@ class AreaUpdateView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class RoomView(generics.ListCreateAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = RoomSerializer
     queryset = Room.objects.all()
 
 
 class RoomUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = RoomSerializer
     queryset = Room.objects.all()
     lookup_field = 'number'
@@ -48,11 +55,13 @@ class RoomUpdateView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class BuildingView(generics.ListCreateAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = BuildingSerializer
     queryset = Building.objects.all()
 
 
 class BuildingUpdateView(generics.RetrieveUpdateDestroyAPIView):
+    authentication_classes = (TokenAuthentication,)
     serializer_class = BuildingSerializer
     queryset = Building.objects.all()
     lookup_field = 'id'
