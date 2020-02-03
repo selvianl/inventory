@@ -1,56 +1,51 @@
-## Installation
+ There are 2 branches in this repository. `master` for local installation/usage and `heroku` is running at <br>
+ https://inv-tracker-app.herokuapp.com/ domain. Project has REST API support as well and you can find out endpoints from postman collection named `postman_collection.json` file.
+
+## Local Installation
 
 * Go your home directory by typing `cd ~`.
 
-* Create virtual enviroment by running `virtualenv --python=python3 pizza`.
+* Create virtual enviroment by running `virtualenv --python=python3 inventory`.
 
-* Clone the project by typing `git clone https://github.com/selvianl/pizza-service.git`.
+* Clone the project by typing `git clone https://github.com/selvianl/inventory.git`.
 
-* Go in the project directory: `cd pizza-service`.
+* Go in the project directory: `cd inventory`.
 
-* Activate the virtual environment by running `source ~/pizza/bin/activate `.
+* Activate the virtual environment by running `source ~/inventory/bin/activate `.
 
-* If docker is not installed, install by getting help from:<br>
-  https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1
-  
- * Create container for API by typing `sudo docker build -t pizza-service .`.
+* Create your own database and change veriable values in `db.sh` and type `source db.sh `.
 
-* Pull container of postgres by typing ` sudo docker pull postgres:10.10 `.
+* Install needed packages by typing `pip install -r requirements.txt `.
 
-* Start docker swarm by typing `sudo docker swarm init`.
+* Make migrations and migrate by typing `python manage.py makemigrations && python manage.py migrate `.
 
-* Create stack service by typing `sudo docker stack deploy -c docker-compose.yml demo`.
+* Create Super User by typing `python manage.py createsuperuser `.
 
-* Track service status by typing `sudo docker service ls`.
+* Then run it by typing `python manage.py runserver`
 
-* Halt the service by typing `sudo docker service rm demo_pizza-sercive demo_postgres`.
-
-* Check for log of service by typing `sudo docker servi log <service_name>`.
 
 ## API Endpoints
 
-* **Create a customer:** http://127.0.0.1:8000/api/create_customer/
+* **Create a furniture:** http://127.0.0.1:8000/api/furnitures/ [POST]
+* **Retrieve all furnitures:** http://127.0.0.1:8000/api/furnitures/ [GET]
+* **Update a furniture:** http://127.0.0.1:8000/api/furnitures/id/ [PUT]
+* **Detail a furniture:** http://127.0.0.1:8000/api/furnitures/id/ [GET]
+* **Delete a furniture:** http://127.0.0.1:8000/api/furnitures/id/ [DELETE]
 
-* **Create a pizza:** http://127.0.0.1:8000/api/create_pizza/
+* **Create a area:** http://127.0.0.1:8000/api/areas/ [POST]    
+* **Retrieve all areas:** http://127.0.0.1:8000/api/areas/ [GET]
+* **Update a area:** http://127.0.0.1:8000/api/areas/id/ [PUT]  
+* **Detail a area:** http://127.0.0.1:8000/api/areas/id/ [GET]  
+* **Delete a area:** http://127.0.0.1:8000/api/areas/id/ [DELETE]  
 
-* **Create an order:** http://127.0.0.1:8000/api/create_order/ <br>
-  When adding an order for a new customer you have to first add a customer, then add a pizza and then add an order selecting those objects for its fields. 
-  
+* **Create a room:** http://127.0.0.1:8000/api/rooms/ [POST]    
+* **Retrieve all rooms:** http://127.0.0.1:8000/api/rooms/ [GET]
+* **Update a room:** http://127.0.0.1:8000/api/rooms/id/ [PUT]  
+* **Detail a room:** http://127.0.0.1:8000/api/rooms/id/ [GET]  
+* **Delete a room:** http://127.0.0.1:8000/api/rooms/id/ [DELETE] 
 
-* **Track an Order Status:** http://127.0.0.1:8000/api/track_status_order/ (order id)/
-
-* **Change Status of Order:** http://127.0.0.1:8000/api/update_status_order/ (order id)/
-
-* **Edit an Order Details:** http://127.0.0.1:8000/api/update_order/ (order id)/
-
-* **Remove an Order:** http://127.0.0.1:8000/api/remove_order/ (order id)/
-
-* **Showing all orders:** http://127.0.0.1:8000/api/list_order/ 
-
-* **Details of a spesific order:** http://127.0.0.1:8000/api/detail_order/ ?order_id=<VALUE>/
-                                                
-* **Filtering Orders:** http://127.0.0.1:8000/api/search_order/ ?customer_id=<VALUE>&delivered=<VALUE>/
-
-## Test
-
-To run the tests run the command `python manage.py test api` .
+* **Create a building:** http://127.0.0.1:8000/api/buildings/ [POST]     
+* **Retrieve all buildings:** http://127.0.0.1:8000/api/buildings/ [GET] 
+* **Update a building:** http://127.0.0.1:8000/api/buildings/id/ [PUT]   
+* **Detail a building:** http://127.0.0.1:8000/api/buildings/id/ [GET]   
+* **Delete a building:** http://127.0.0.1:8000/api/buildings/id/ [DELETE]   
