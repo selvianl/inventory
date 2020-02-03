@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'inv-tracker-app.herokuapp
 
 # Application definition
 
-
 INSTALLED_APPS = [
     'dashboard',
     'dashboard.room',
@@ -91,12 +90,12 @@ WSGI_APPLICATION = 'inventory.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get("ENGINE", 'django.db.backends.postgresql_psycopg2'),
-        'NAME': os.environ.get("NAME", None),
-        'USER': os.environ.get("USER", None),
-        'PASSWORD': os.environ.get("PASSWORD", None),
-        'HOST': os.environ.get("HOST", None),
-        'PORT': os.environ.get("PORT", None),
+        'ENGINE': os.environ.get("DATABASE_ENGINE", 'django.db.backends.postgresql_psycopg2'),
+        'NAME': os.environ.get("DATABASE_NAME", None),
+        'USER': os.environ.get("DATABASE_USER", None),
+        'PASSWORD': os.environ.get("DATABASE_PASSWORD", None),
+        'HOST': os.environ.get("DATABASE_HOST", None),
+        'PORT': os.environ.get("DATABASE_PORT", None),
     }
 }
 
