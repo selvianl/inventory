@@ -16,10 +16,10 @@ class FurnitureUpdateView(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes = (TokenAuthentication,)
     serializer_class = FurnitureSerializer
     queryset = Furniture.objects.all()
-    lookup_field = 'name'
+    lookup_field = 'id'
 
     def get_object(self):
-        return get_object_or_404(Furniture, name=self.kwargs['name'])
+        return get_object_or_404(Furniture, id=self.kwargs['id'])
 
 
 class AreaView(generics.ListCreateAPIView):
@@ -32,10 +32,10 @@ class AreaUpdateView(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes = (TokenAuthentication,)
     serializer_class = AreaSerializer
     queryset = Area.objects.all()
-    lookup_field = 'name'
+    lookup_field = 'id'
 
     def get_object(self):
-        return get_object_or_404(Area, name=self.kwargs['name'])
+        return get_object_or_404(Area, id=self.kwargs['id'])
 
 
 class RoomView(generics.ListCreateAPIView):
@@ -48,10 +48,10 @@ class RoomUpdateView(generics.RetrieveUpdateDestroyAPIView):
     authentication_classes = (TokenAuthentication,)
     serializer_class = RoomSerializer
     queryset = Room.objects.all()
-    lookup_field = 'number'
+    lookup_field = 'id'
 
     def get_object(self):
-        return get_object_or_404(Room, number=self.kwargs['number'])
+        return get_object_or_404(Room, id=self.kwargs['id'])
 
 
 class BuildingView(generics.ListCreateAPIView):
