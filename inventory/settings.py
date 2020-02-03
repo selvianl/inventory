@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -26,7 +25,7 @@ SECRET_KEY = 'yltsj-b&p5z+*w#1+s@tx*-hv=s^)4&@sp-h_8k3%jsb3_q87%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'inv-tracker-app.herokuapp.com']
 
 
 # Application definition
@@ -55,6 +54,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -88,17 +88,19 @@ WSGI_APPLICATION = 'inventory.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-
 DATABASES = {
     'default': {
-        'ENGINE': os.environ.get("DATABASE_ENGINE", 'django.db.backends.postgresql_psycopg2'),
-        'NAME': os.environ.get("DATABASE_NAME", None),
-        'USER': os.environ.get("DATABASE_USER", None),
-        'PASSWORD': os.environ.get("DATABASE_PASSWORD", None),
-        'HOST': os.environ.get("DATABASE_HOST", None),
-        'PORT': os.environ.get("DATABASE_PORT", None),
+        'ENGINE': os.environ.get("ENGINE", 'django.db.backends.postgresql_psycopg2'),
+        'NAME': os.environ.get("NAME", None),
+        'USER': os.environ.get("USER", None),
+        'PASSWORD': os.environ.get("PASSWORD", None),
+        'HOST': os.environ.get("HOST", None),
+        'PORT': os.environ.get("PORT", None),
     }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 REST_FRAMEWORK = {
 
@@ -149,7 +151,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 STATIC_URL = '/static/'
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-django_heroku.settings(locals())
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
