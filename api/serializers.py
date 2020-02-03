@@ -6,21 +6,21 @@ class FurnitureSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Furniture
-        fields = ("name", "price")
+        fields = ("id", "name", "price")
 
 
 class AreaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Area
-        fields = ("name",)
+        fields = ("id", "name")
 
 
 class RoomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Room
-        fields = ("number",)
+        fields = ("id", "number")
 
 
 class BuildingSerializer(serializers.ModelSerializer):
@@ -30,7 +30,8 @@ class BuildingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Building
-        fields = ('name', 'furnitures', 'areas', 'rooms')
+        fields = ('id', 'name', 'furnitures', 'areas', 'rooms')
+
 
     def create(self, validated_data):
         building = Building.objects.create(**validated_data)
@@ -51,14 +52,17 @@ class BuildingSerializer(serializers.ModelSerializer):
         rooms = self.initial_data['rooms']
         areas = self.initial_data['areas']
         for furniture in furnitures:
+            furniture_obj, _ = Furniture.objects.get_or_create(**furniture)
             instance.furnitures.clear()
-            instance.furnitures.get_or_create(**furniture)
+            instance.furnitures.add(furniture_obj)
         for room in rooms:
+            room_obj, _ = Room.objects.get_or_create(**room)
             instance.rooms.clear()
-            instance.rooms.get_or_create(**room)
+            instance.rooms.add(room_obj)
         for area in areas:
+            area_obj, _ = Area.objects.get_or_create(**area)
             instance.areas.clear()
-            instance.areas.get_or_create(**area)
+            instance.areas.add(area_obj)
         instance.name = name
         instance.save()
         return instance
