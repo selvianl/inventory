@@ -24,9 +24,9 @@ class RoomSerializer(serializers.ModelSerializer):
 
 
 class BuildingSerializer(serializers.ModelSerializer):
-    furnitures = FurnitureSerializer(many=True, read_only=True)
-    areas = AreaSerializer(many=True, read_only=True)
-    rooms = RoomSerializer(many=True, read_only=True)
+    furnitures = FurnitureSerializer(many=True)
+    areas = AreaSerializer(many=True)
+    rooms = RoomSerializer(many=True)
 
     class Meta:
         model=Building
@@ -34,7 +34,7 @@ class BuildingSerializer(serializers.ModelSerializer):
 
 
     def create(self, validated_data):
-        building = Building.objects.create(**validated_data)
+        building, _  = Building.objects.get_or_create(name=validated_data['name'])
         for furniture in self.initial_data.pop('furnitures'):
             furniture_obj, _ = Furniture.objects.get_or_create(**furniture)
             building.furnitures.add(furniture_obj)
@@ -47,19 +47,16 @@ class BuildingSerializer(serializers.ModelSerializer):
         return building
 
     def update(self, instance, validated_data):
-        name = self.validated_data['name']
-        furnitures =  self.initial_data['furnitures']
-        rooms = self.initial_data['rooms']
-        areas = self.initial_data['areas']
-        for furniture in furnitures:
+        name = validated_data['name']
+        for furniture in validated_data['furnitures']:
             furniture_obj, _ = Furniture.objects.get_or_create(**furniture)
             instance.furnitures.clear()
             instance.furnitures.add(furniture_obj)
-        for room in rooms:
+        for room in validated_data['rooms']:
             room_obj, _ = Room.objects.get_or_create(**room)
             instance.rooms.clear()
             instance.rooms.add(room_obj)
-        for area in areas:
+        for area in validated_data['areas']:
             area_obj, _ = Area.objects.get_or_create(**area)
             instance.areas.clear()
             instance.areas.add(area_obj)

@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Furniture(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
     price = models.PositiveIntegerField()
 
     def __str__(self):
@@ -10,14 +10,14 @@ class Furniture(models.Model):
 
 
 class Area(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return u'%s' % (self.name)
 
 
 class Room(models.Model):
-    number = models.PositiveIntegerField(unique=True)
+    number = models.PositiveIntegerField()
 
     def __str__(self):
         return u'%s' % (self.number)
