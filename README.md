@@ -1,5 +1,23 @@
- There are 2 branches in this repository. `master` for local installation/usage and `heroku` is running at <br>
- https://inv-tracker-app.herokuapp.com/ domain. Project has REST API support as well and you can find out endpoints from postman collection named `postman_collection.json` file.
+## About Project 
+
+* This is a simple inventory tracking system. You can create buildings, rooms, areas(salloon, kitchen etc.) and furnitures.
+* These stuffs are related each other and you can trace total furnitures amount for each areas, rooms and buildings.
+
+## About Technologies Used
+
+* Project run on Django Framework, it has REST API support, and database runs on Postgresql. 
+* You can add staffs by using Django admin panel and API Endpoints as well.
+* You can find out endpoints from postman collection named `postman_collection.json` file.
+
+
+## About Repository
+
+* There are 2 branches in this repository. <br>
+  `master` for local installation/usage <br>
+  `heroku` is running at <br>
+   Difference between them is just about configration of `inventory/settings.py` file.
+ https://inv-tracker-app.herokuapp.com/ 
+ 
 
 ## Local Installation
 
