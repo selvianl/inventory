@@ -4,6 +4,13 @@ from rest_framework import exceptions
 
 class FurnitureSerializer(serializers.ModelSerializer):
 
+    def validate(self, data):
+        furniture, _ = Furniture.objects.get_or_create(**data)
+        return furniture
+
+    def save(self):
+        return self.validated_data
+
     class Meta:
         model=Furniture
         fields = ("id", "name", "price")
@@ -11,12 +18,26 @@ class FurnitureSerializer(serializers.ModelSerializer):
 
 class AreaSerializer(serializers.ModelSerializer):
 
+    def validate(self, data):
+        area, _ = Area.objects.get_or_create(**data)
+        return area
+
+    def save(self):
+        return self.validated_data
+
     class Meta:
         model=Area
         fields = ("id", "name")
 
 
 class RoomSerializer(serializers.ModelSerializer):
+
+    def validate(self, data):
+        room, _ = Room.objects.get_or_create(**data)
+        return room
+
+    def save(self):
+        return self.validated_data
 
     class Meta:
         model=Room
@@ -34,7 +55,7 @@ class BuildingSerializer(serializers.ModelSerializer):
 
 
     def create(self, validated_data):
-        building, _  = Building.objects.get_or_create(name=validated_data['name'])
+        building = Building.objects.create(name=validated_data['name'])
         for furniture in self.initial_data.pop('furnitures'):
             furniture_obj, _ = Furniture.objects.get_or_create(**furniture)
             building.furnitures.add(furniture_obj)
@@ -49,17 +70,14 @@ class BuildingSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         name = validated_data['name']
         for furniture in validated_data['furnitures']:
-            furniture_obj, _ = Furniture.objects.get_or_create(**furniture)
             instance.furnitures.clear()
-            instance.furnitures.add(furniture_obj)
+            instance.furnitures.add(furniture)
         for room in validated_data['rooms']:
-            room_obj, _ = Room.objects.get_or_create(**room)
             instance.rooms.clear()
-            instance.rooms.add(room_obj)
+            instance.rooms.add(room)
         for area in validated_data['areas']:
-            area_obj, _ = Area.objects.get_or_create(**area)
             instance.areas.clear()
-            instance.areas.add(area_obj)
+            instance.areas.add(area)
         instance.name = name
         instance.save()
         return instance
