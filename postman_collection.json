@@ -21,13 +21,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token 6c76807ce1b38f115e022d280c97dcdf4ae14c01",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"C\",\n \t\"furnitures\": \n \t\t[{\n            \"name\": \"Tablet\",\n        \t\"price\": 3000\n            }\n            ],            \n\t\"rooms\": \n\t\t[\n            {\n            \"number\":2\n            }\n            ],\n    \"areas\": [{\n    \t\"name\":\"Bedroom\"\n    }]\n}",
+							"raw": "{\n\t\"name\" : \"A\",\n \t\"furnitures\": \n \t\t[{\n            \"name\": \"Tablet\",\n        \t\"price\": 3000\n            },\n            {\n            \"name\": \"PC\",\n        \t\"price\": 4000\n            }\n            ],\n            \n\t\"rooms\": \n\t\t[\n            {\n            \"number\":1\n            }\n            ],\n    \"areas\": [{\n    \t\"name\":\"Salloon\"\n    }]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -55,7 +55,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
@@ -86,13 +86,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"name\" : \"C\",\n \t\"furnitures\": \n \t\t[{\n            \"name\": \"Fridge\",\n        \t\"price\": 3000\n            }\n            ],            \n\t\"rooms\": \n\t\t[\n            {\n            \"number\":2\n            }\n            ],\n    \"areas\": [{\n    \t\"name\":\"Bedroom\"\n    }]\n}",
+							"raw": "{\n\t\"name\" : \"C\",\n \t\"furnitures\": \n \t\t[{\n            \"name\": \"Tablet\",\n        \t\"price\": 3000\n            }\n            ],            \n\t\"rooms\": \n\t\t[\n            {\n            \"number\":2\n            }\n            ],\n    \"areas\": [{\n    \t\"name\":\"Bedroom\"\n    }]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -100,14 +100,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/buildings/68/",
+							"raw": "{{url}}/api/buildings/3/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"buildings",
-								"68",
+								"3",
 								""
 							]
 						}
@@ -197,13 +197,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token 6c76807ce1b38f115e022d280c97dcdf4ae14c01",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Tablet\",\n    \"price\": 3000\n}",
+							"raw": "{\n    \"name\": \"Sofa\",\n    \"price\": 3000\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -237,7 +237,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
@@ -268,13 +268,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Fridge\",\n    \"price\": 2000\n}",
+							"raw": "{\n    \"name\": \"Fr1idge\",\n    \"price\": 21110100\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -282,14 +282,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/furnitures/1/",
+							"raw": "{{url}}/api/furnitures/5/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"furnitures",
-								"1",
+								"5",
 								""
 							]
 						}
@@ -329,19 +329,19 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/furnitures/12/",
+							"raw": "{{url}}/api/furnitures/1/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"furnitures",
-								"12",
+								"1",
 								""
 							]
 						}
@@ -367,13 +367,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token 6c76807ce1b38f115e022d280c97dcdf4ae14c01",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"number\": 2\n}",
+							"raw": "{\n    \"number\": 3\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -401,14 +401,15 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							},
 							{
 								"key": "Content-Type",
 								"name": "Content-Type",
 								"value": "text/plain",
-								"type": "text"
+								"type": "text",
+								"disabled": true
 							}
 						],
 						"url": {
@@ -438,13 +439,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"number\":1\n}",
+							"raw": "{\n    \"number\":11\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -499,19 +500,19 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{url}}/api/rooms/4/",
+							"raw": "{{url}}/api/rooms/1/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"rooms",
-								"4",
+								"1",
 								""
 							]
 						}
@@ -537,13 +538,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Token 6c76807ce1b38f115e022d280c97dcdf4ae14c01",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Living Room\"\n}",
+							"raw": "{\n    \"name\": \"Bathroom\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -571,7 +572,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
@@ -599,6 +600,11 @@
 								"name": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token {{auth_token}}",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -611,14 +617,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{url}}/api/areas/Living Room/",
+							"raw": "{{url}}/api/areas/1/",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"api",
 								"areas",
-								"Living Room",
+								"1",
 								""
 							]
 						}
@@ -632,7 +638,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
+								"value": "Token {{auth_token}}",
 								"type": "text"
 							}
 						],
@@ -652,14 +658,14 @@
 					"response": []
 				},
 				{
-					"name": "Furniture Delete",
+					"name": "Area Delete",
 					"request": {
 						"method": "DELETE",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Token c10473c48103beca8d1f176ed4165ab071f963dd",
-								"type": "text"
+								"type": "text",
+								"value": "Token {{auth_token}}"
 							}
 						],
 						"url": {
@@ -703,7 +709,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\" : \"test\",\n\t\"email\" : \"ab@gmail.com\",\n\t\"password1\": \"selvianl123\",\n\t\"password2\": \"selvianl123\"\n}",
+							"raw": "{\n\t\"username\" : \"sub_metglobal1\",\n\t\"email\" : \"aa@gmail.com\",\n\t\"password1\": \"inventory123\",\n\t\"password2\": \"inventory123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -744,7 +750,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"username\" : \"test\",\n\t\"email\" : \"ab@gmail.com\",\n\t\"password\": \"selvianl123\"\n}",
+							"raw": "{\n\t\"username\" : \"sub_metglobal\",\n\t\"email\" : \"a@gmail.com\",\n\t\"password\": \"inventory123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
