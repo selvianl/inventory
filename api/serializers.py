@@ -16,6 +16,12 @@ class FurnitureSerializer(serializers.ModelSerializer):
         fields = ("id", "name", "price")
 
 
+class FurnitureUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Furniture
+        fields = ("id", "name", "price")
+
+
 class AreaSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
@@ -30,6 +36,12 @@ class AreaSerializer(serializers.ModelSerializer):
         fields = ("id", "name")
 
 
+class AreaUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Area
+        fields = ("id", "name")
+
+
 class RoomSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
@@ -39,6 +51,12 @@ class RoomSerializer(serializers.ModelSerializer):
     def save(self):
         return self.validated_data
 
+    class Meta:
+        model=Room
+        fields = ("id", "number")
+
+
+class RoomUpdateSerializer(serializers.ModelSerializer):
     class Meta:
         model=Room
         fields = ("id", "number")
@@ -68,6 +86,8 @@ class BuildingSerializer(serializers.ModelSerializer):
         return building
 
     def update(self, instance, validated_data):
+        import ipdb
+        ipdb.set_trace()
         name = validated_data['name']
         for furniture in validated_data['furnitures']:
             instance.furnitures.clear()
