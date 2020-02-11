@@ -15,8 +15,6 @@ class FurnitureIndexView(BaseIndexView):
         objs = context['object_list'][0]
         obj_tags = context['object_list'][1]
         for obj_tag in obj_tags:
-            import ipdb
-            ipdb.set_trace()
             amount = objs.filter(name=obj_tag[0]).aggregate(total=Count(self.filter_by))
             total[obj_tag[0]] = amount.get('total')
         context['totals'] =total
