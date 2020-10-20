@@ -1,7 +1,10 @@
 from django.urls import path, include
 from api import views
+from rest_auth.views import LoginView
 
 urlpatterns = [
+    path('login', LoginView().as_view(),
+         name="login"),
     path('furnitures/', views.FurnitureView.as_view(),
         name='furnitures'),
     path('furnitures/<int:id>/', views.FurnitureUpdateView.as_view(),

@@ -17,14 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf  import settings
+from rest_auth.views import LoginView
 
-from dashboard.views import index
+from dashboard.views import index, register
 urlpatterns = [
-    path('rest-auth/', include('rest_auth.urls')),
-    path('rest-auth/registration/', include('rest_auth.registration.urls')),
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('api/', include('api.urls')),
+    path('register', register,
+         name="register"),
+    path('api/v1/', include('api.urls')),
     path('dashboard/', include(('dashboard.building.urls', 'dashboard.building'), namespace="building")),
     path('dashboard/', include(('dashboard.area.urls', 'dashboard.area'), namespace="area")),
     path('dashboard/', include(('dashboard.furniture.urls', 'dashboard.furniture'), namespace="furniture")),
