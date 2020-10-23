@@ -1,0 +1,13 @@
+{% load static %}
+
+<link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css" media="all"/>
+<div id="content" class="content">
+{% block content %}
+{% endblock content %}
+    <a href="{% url 'index' %}">
+    <h4>Home</h4>
+    </a>
+</div>
+
+
+

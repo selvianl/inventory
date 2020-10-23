@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+<h2>Total Furniture Amount</h2>
+    <table>
+    <tr>
+        <td>Areas</td>
+        <td>Total<br> Furniture</td>
+    </tr>
+    <tr>
+{% for key, value in totals.items %} 
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
+{% endfor %}
+    </table>
+
+</body>
+{% endblock %}
