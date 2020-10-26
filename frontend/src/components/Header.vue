@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand class="text-white" href="#">Inventory!!</b-navbar-brand>
+      <b-navbar-brand :to="{ name: 'home' }" class="text-white" href="#"
+        >Inventory!!</b-navbar-brand
+      >
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-navbar-nav class="ml-auto">
         <b-nav-form @submit.prevent="login" v-if="token == null">
@@ -33,10 +35,10 @@
 
         <b-nav-form @submit.prevent="register" v-if="token === null">
           <b-button
+            :to="{ name: 'register' }"
             size="sm"
             class="my-2 ml-2"
             type="submit"
-            :to="{ name: 'register' }"
             >Register</b-button
           >
         </b-nav-form>
@@ -68,13 +70,15 @@ export default {
         })
         .then((resp) => {
           this.token = resp.data.key;
-          console.log(this.username +" logged in with: " + this.token);
+          console.log(this.username + " logged in with: " + this.token);
           localStorage.setItem("user-token", this.token);
         })
         .catch((err) => {
           console.log(err);
           localStorage.removeItem("user-token");
         });
+
+      this.$router.push("/").catch(()=>{});
     },
     logout() {
       axios
@@ -90,6 +94,7 @@ export default {
         .catch((err) => {
           console.log(err);
         });
+      this.$router.push("/").catch(()=>{});
     },
   },
 };

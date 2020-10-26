@@ -81,7 +81,6 @@ export default {
         .then((resp) => {
           this.token = resp.data.key;
           console.log(this.username + " register with : " + this.token);
-          localStorage.setItem("user-token", this.token);
         })
         .catch((err) => {
           if (err.response) {
@@ -94,6 +93,7 @@ export default {
             });
           }
         });
+      this.$router.push({ name: "home" });
     },
   },
 };

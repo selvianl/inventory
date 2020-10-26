@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions_shell',
     'corsheaders',
     'dashboard',
     'dashboard.room',

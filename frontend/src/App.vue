@@ -2,21 +2,19 @@
   <div id="app">
     <div id="nav">
       <Header />
-      <Register />
       <!-- <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> -->
     </div>
+    <router-view />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
-import Register from "@/components/Register.vue";
 export default {
   name: "",
   components: {
-    Header,
-    Register,
+    Header
   },
 };
 </script>
