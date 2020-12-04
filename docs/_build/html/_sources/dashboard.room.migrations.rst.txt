@@ -1,0 +1,10 @@
+dashboard.room.migrations package
+=================================
+
+Module contents
+---------------
+
+.. automodule:: dashboard.room.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

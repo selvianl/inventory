@@ -1,0 +1,483 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>api package &mdash; Inventory 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Inventory
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">api package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-api.models">api.models module</a></li>
+<li><a class="reference internal" href="#module-api.serializers">api.serializers module</a></li>
+<li><a class="reference internal" href="#module-api.urls">api.urls module</a></li>
+<li><a class="reference internal" href="#module-api.views">api.views module</a></li>
+<li><a class="reference internal" href="#module-api">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Inventory</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>api package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-package">
+<h1>api package<a class="headerlink" href="#api-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-api.models">
+<span id="api-models-module"></span><h2>api.models module<a class="headerlink" href="#module-api.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="api.models.Area">
+<em class="property">class </em><code class="sig-prename descclassname">api.models.</code><code class="sig-name descname">Area</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/models.html#Area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.models.Area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores areas</p>
+<dl class="py exception">
+<dt id="api.models.Area.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#api.models.Area.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="api.models.Area.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#api.models.Area.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.models.Building">
+<em class="property">class </em><code class="sig-prename descclassname">api.models.</code><code class="sig-name descname">Building</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/models.html#Building"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.models.Building" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores buildings</p>
+<dl class="py exception">
+<dt id="api.models.Building.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#api.models.Building.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="api.models.Building.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#api.models.Building.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.models.Furniture">
+<em class="property">class </em><code class="sig-prename descclassname">api.models.</code><code class="sig-name descname">Furniture</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/models.html#Furniture"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.models.Furniture" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores furnitures</p>
+<dl class="py exception">
+<dt id="api.models.Furniture.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#api.models.Furniture.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="api.models.Furniture.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#api.models.Furniture.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.models.Room">
+<em class="property">class </em><code class="sig-prename descclassname">api.models.</code><code class="sig-name descname">Room</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/models.html#Room"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.models.Room" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores rooms</p>
+<dl class="py exception">
+<dt id="api.models.Room.DoesNotExist">
+<em class="property">exception </em><code class="sig-name descname">DoesNotExist</code><a class="headerlink" href="#api.models.Room.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt id="api.models.Room.MultipleObjectsReturned">
+<em class="property">exception </em><code class="sig-name descname">MultipleObjectsReturned</code><a class="headerlink" href="#api.models.Room.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-api.serializers">
+<span id="api-serializers-module"></span><h2>api.serializers module<a class="headerlink" href="#module-api.serializers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="api.serializers.AreaSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">AreaSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#AreaSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.AreaSerializer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.AreaUpdateSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">AreaUpdateSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#AreaUpdateSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.AreaUpdateSerializer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.BuildingSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">BuildingSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#BuildingSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.BuildingSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="api.serializers.BuildingSerializer.create">
+<code class="sig-name descname">create</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">validated_data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#BuildingSerializer.create"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.BuildingSerializer.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>We have a bit of extra checking around this in order to provide
+descriptive messages when something goes wrong, but this method is
+essentially just:</p>
+<blockquote>
+<div><p>return ExampleModel.objects.create(<a href="#id1"><span class="problematic" id="id2">**</span></a>validated_data)</p>
+</div></blockquote>
+<p>If there are many to many fields present on the instance then they
+cannot be set until the model is instantiated, in which case the
+implementation is like so:</p>
+<blockquote>
+<div><p>example_relationship = validated_data.pop(‘example_relationship’)
+instance = ExampleModel.objects.create(<a href="#id3"><span class="problematic" id="id4">**</span></a>validated_data)
+instance.example_relationship = example_relationship
+return instance</p>
+</div></blockquote>
+<p>The default implementation also does not handle nested relationships.
+If you want to support writable nested relationships you’ll need
+to write an explicit <cite>.create()</cite> method.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.FurnitureSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">FurnitureSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#FurnitureSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.FurnitureSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bu boktan bir serialierdir
+Modeldeki butun fieldlari kabul eder.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.FurnitureUpdateSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">FurnitureUpdateSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#FurnitureUpdateSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.FurnitureUpdateSerializer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.RoomSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">RoomSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#RoomSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.RoomSerializer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="api.serializers.RoomUpdateSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">api.serializers.</code><code class="sig-name descname">RoomUpdateSerializer</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/serializers.html#RoomUpdateSerializer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.serializers.RoomUpdateSerializer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-api.urls">
+<span id="api-urls-module"></span><h2>api.urls module<a class="headerlink" href="#module-api.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-api.views">
+<span id="api-views-module"></span><h2>api.views module<a class="headerlink" href="#module-api.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="api.views.AreaUpdateView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">AreaUpdateView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#AreaUpdateView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.AreaUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="api.views.AreaUpdateView.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#AreaUpdateView.get_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.AreaUpdateView.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object the view is displaying.</p>
+<p>You may want to override this if you need to provide non-standard
+queryset lookups.  Eg if objects are referenced using multiple
+keyword arguments in the url conf.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="api.views.AreaUpdateView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.AreaUpdateView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.AreaUpdateSerializer" title="api.serializers.AreaUpdateSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.AreaUpdateSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.AreaView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">AreaView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#AreaView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.AreaView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="api.views.AreaView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.AreaView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.AreaSerializer" title="api.serializers.AreaSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.AreaSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.BuildingUpdateView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">BuildingUpdateView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#BuildingUpdateView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.BuildingUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="api.views.BuildingUpdateView.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#BuildingUpdateView.get_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.BuildingUpdateView.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object the view is displaying.</p>
+<p>You may want to override this if you need to provide non-standard
+queryset lookups.  Eg if objects are referenced using multiple
+keyword arguments in the url conf.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="api.views.BuildingUpdateView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.BuildingUpdateView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.BuildingSerializer" title="api.serializers.BuildingSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.BuildingSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.BuildingView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">BuildingView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#BuildingView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.BuildingView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="api.views.BuildingView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.BuildingView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.BuildingSerializer" title="api.serializers.BuildingSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.BuildingSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.FurnitureUpdateView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">FurnitureUpdateView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#FurnitureUpdateView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.FurnitureUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="api.views.FurnitureUpdateView.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#FurnitureUpdateView.get_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.FurnitureUpdateView.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object the view is displaying.</p>
+<p>You may want to override this if you need to provide non-standard
+queryset lookups.  Eg if objects are referenced using multiple
+keyword arguments in the url conf.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="api.views.FurnitureUpdateView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.FurnitureUpdateView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.FurnitureUpdateSerializer" title="api.serializers.FurnitureUpdateSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.FurnitureUpdateSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.FurnitureView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">FurnitureView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#FurnitureView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.FurnitureView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deneme</p>
+<dl class="py attribute">
+<dt id="api.views.FurnitureView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.FurnitureView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.FurnitureSerializer" title="api.serializers.FurnitureSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.FurnitureSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.RoomUpdateView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">RoomUpdateView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#RoomUpdateView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.RoomUpdateView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="api.views.RoomUpdateView.get_object">
+<code class="sig-name descname">get_object</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#RoomUpdateView.get_object"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.RoomUpdateView.get_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the object the view is displaying.</p>
+<p>You may want to override this if you need to provide non-standard
+queryset lookups.  Eg if objects are referenced using multiple
+keyword arguments in the url conf.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="api.views.RoomUpdateView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.RoomUpdateView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.RoomUpdateSerializer" title="api.serializers.RoomUpdateSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.RoomUpdateSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="api.views.RoomView">
+<em class="property">class </em><code class="sig-prename descclassname">api.views.</code><code class="sig-name descname">RoomView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/api/views.html#RoomView"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#api.views.RoomView" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py attribute">
+<dt id="api.views.RoomView.serializer_class">
+<code class="sig-name descname">serializer_class</code><a class="headerlink" href="#api.views.RoomView.serializer_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#api.serializers.RoomSerializer" title="api.serializers.RoomSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.serializers.RoomSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-api">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-api" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, selvianl
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

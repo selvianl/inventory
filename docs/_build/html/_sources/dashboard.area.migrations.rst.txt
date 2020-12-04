@@ -1,0 +1,10 @@
+dashboard.area.migrations package
+=================================
+
+Module contents
+---------------
+
+.. automodule:: dashboard.area.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

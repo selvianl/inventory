@@ -9,6 +9,9 @@ from rest_framework.authentication import TokenAuthentication
 
 
 class FurnitureView(generics.ListCreateAPIView):
+    """
+    Deneme
+    """
     authentication_classes = (TokenAuthentication,)
     serializer_class = FurnitureSerializer
     queryset = Furniture.objects.all()

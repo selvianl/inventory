@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Furniture(models.Model):
+    """Stores furnitures"""
     name = models.CharField(max_length=100)
     price = models.PositiveIntegerField()
 
@@ -10,6 +11,7 @@ class Furniture(models.Model):
 
 
 class Area(models.Model):
+    """Stores areas"""
     name = models.CharField(max_length=100)
 
     def __str__(self):
@@ -17,6 +19,7 @@ class Area(models.Model):
 
 
 class Room(models.Model):
+    """Stores rooms"""
     number = models.PositiveIntegerField()
 
     def __str__(self):
@@ -24,6 +27,7 @@ class Room(models.Model):
 
 
 class Building(models.Model):
+    """Stores buildings"""
     name = models.CharField(max_length=25)
     rooms = models.ManyToManyField(Room)
     areas = models.ManyToManyField(Area)

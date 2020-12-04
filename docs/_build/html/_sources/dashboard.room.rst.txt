@@ -1,0 +1,69 @@
+dashboard.room package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dashboard.room.migrations
+
+Submodules
+----------
+
+dashboard.room.admin module
+---------------------------
+
+.. automodule:: dashboard.room.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.room.apps module
+--------------------------
+
+.. automodule:: dashboard.room.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.room.models module
+----------------------------
+
+.. automodule:: dashboard.room.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.room.tests module
+---------------------------
+
+.. automodule:: dashboard.room.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.room.urls module
+--------------------------
+
+.. automodule:: dashboard.room.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.room.views module
+---------------------------
+
+.. automodule:: dashboard.room.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: dashboard.room
+   :members:
+   :undoc-members:
+   :show-inheritance:

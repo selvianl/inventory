@@ -3,6 +3,10 @@ from api.models import *
 from rest_framework import exceptions
 
 class FurnitureSerializer(serializers.ModelSerializer):
+    """
+    Bu boktan bir serialierdir
+    Modeldeki butun fieldlari kabul eder.
+    """
 
     def validate(self, data):
         furniture, _ = Furniture.objects.get_or_create(**data)

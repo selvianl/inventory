@@ -4,6 +4,7 @@ from rest_auth.views import LoginView,LogoutView
 from rest_auth.registration.views import RegisterView
 
 urlpatterns = [
+
     path('login', LoginView().as_view(),
          name="login"),
     path('logout', LogoutView().as_view(),

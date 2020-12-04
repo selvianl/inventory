@@ -1,0 +1,37 @@
+dashboard.furniture package
+===========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dashboard.furniture.migrations
+
+Submodules
+----------
+
+dashboard.furniture.models module
+---------------------------------
+
+.. automodule:: dashboard.furniture.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.furniture.urls module
+-------------------------------
+
+.. automodule:: dashboard.furniture.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.furniture.views module
+--------------------------------
+
+.. automodule:: dashboard.furniture.views
+   :members:
+   :undoc-members:
+   :show-inheritance:

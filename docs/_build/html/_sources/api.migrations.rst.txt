@@ -1,0 +1,45 @@
+api.migrations package
+======================
+
+Submodules
+----------
+
+api.migrations.0001\_initial module
+-----------------------------------
+
+.. automodule:: api.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+api.migrations.0002\_auto\_20200130\_1407 module
+------------------------------------------------
+
+.. automodule:: api.migrations.0002_auto_20200130_1407
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+api.migrations.0003\_auto\_20200201\_1732 module
+------------------------------------------------
+
+.. automodule:: api.migrations.0003_auto_20200201_1732
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+api.migrations.0004\_auto\_20200204\_0611 module
+------------------------------------------------
+
+.. automodule:: api.migrations.0004_auto_20200204_0611
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: api.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

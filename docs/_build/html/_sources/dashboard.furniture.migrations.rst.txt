@@ -1,0 +1,10 @@
+dashboard.furniture.migrations package
+======================================
+
+Module contents
+---------------
+
+.. automodule:: dashboard.furniture.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

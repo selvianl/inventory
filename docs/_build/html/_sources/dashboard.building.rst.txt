@@ -1,0 +1,69 @@
+dashboard.building package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dashboard.building.migrations
+
+Submodules
+----------
+
+dashboard.building.admin module
+-------------------------------
+
+.. automodule:: dashboard.building.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.building.apps module
+------------------------------
+
+.. automodule:: dashboard.building.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.building.models module
+--------------------------------
+
+.. automodule:: dashboard.building.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.building.tests module
+-------------------------------
+
+.. automodule:: dashboard.building.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.building.urls module
+------------------------------
+
+.. automodule:: dashboard.building.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.building.views module
+-------------------------------
+
+.. automodule:: dashboard.building.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: dashboard.building
+   :members:
+   :undoc-members:
+   :show-inheritance:

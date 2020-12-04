@@ -1,0 +1,69 @@
+dashboard.area package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   dashboard.area.migrations
+
+Submodules
+----------
+
+dashboard.area.admin module
+---------------------------
+
+.. automodule:: dashboard.area.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.area.apps module
+--------------------------
+
+.. automodule:: dashboard.area.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.area.models module
+----------------------------
+
+.. automodule:: dashboard.area.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.area.tests module
+---------------------------
+
+.. automodule:: dashboard.area.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.area.urls module
+--------------------------
+
+.. automodule:: dashboard.area.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+dashboard.area.views module
+---------------------------
+
+.. automodule:: dashboard.area.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: dashboard.area
+   :members:
+   :undoc-members:
+   :show-inheritance:

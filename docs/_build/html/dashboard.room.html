@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard.room package &#8212; Inventory 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dashboard-room-package">
+<h1>dashboard.room package<a class="headerlink" href="#dashboard-room-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.room.migrations.html">dashboard.room.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.room.migrations.html#module-dashboard.room.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.room.admin">
+<span id="dashboard-room-admin-module"></span><h2>dashboard.room.admin module<a class="headerlink" href="#module-dashboard.room.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.room.apps">
+<span id="dashboard-room-apps-module"></span><h2>dashboard.room.apps module<a class="headerlink" href="#module-dashboard.room.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="dashboard.room.apps.RoomConfig">
+<em class="property">class </em><code class="sig-prename descclassname">dashboard.room.apps.</code><code class="sig-name descname">RoomConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">app_name</span></em>, <em class="sig-param"><span class="n">app_module</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dashboard.room.apps.RoomConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="py attribute">
+<dt id="dashboard.room.apps.RoomConfig.name">
+<code class="sig-name descname">name</code><em class="property"> = 'room'</em><a class="headerlink" href="#dashboard.room.apps.RoomConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dashboard.room.models">
+<span id="dashboard-room-models-module"></span><h2>dashboard.room.models module<a class="headerlink" href="#module-dashboard.room.models" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.room.tests">
+<span id="dashboard-room-tests-module"></span><h2>dashboard.room.tests module<a class="headerlink" href="#module-dashboard.room.tests" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.room.urls">
+<span id="dashboard-room-urls-module"></span><h2>dashboard.room.urls module<a class="headerlink" href="#module-dashboard.room.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.room.views">
+<span id="dashboard-room-views-module"></span><h2>dashboard.room.views module<a class="headerlink" href="#module-dashboard.room.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="dashboard.room.views.RoomIndexView">
+<em class="property">class </em><code class="sig-prename descclassname">dashboard.room.views.</code><code class="sig-name descname">RoomIndexView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dashboard.room.views.RoomIndexView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="dashboard.html#dashboard.views.BaseIndexView" title="dashboard.views.BaseIndexView"><code class="xref py py-class docutils literal notranslate"><span class="pre">dashboard.views.BaseIndexView</span></code></a></p>
+<dl class="py attribute">
+<dt id="dashboard.room.views.RoomIndexView.filter_by">
+<code class="sig-name descname">filter_by</code><em class="property"> = 'building__furnitures__name'</em><a class="headerlink" href="#dashboard.room.views.RoomIndexView.filter_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.room.views.RoomIndexView.filter_tag">
+<code class="sig-name descname">filter_tag</code><em class="property"> = 'number'</em><a class="headerlink" href="#dashboard.room.views.RoomIndexView.filter_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dashboard.room.views.RoomIndexView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dashboard.room.views.RoomIndexView.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the context for this view.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.room.views.RoomIndexView.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#dashboard.room.views.RoomIndexView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="api.html#api.models.Room" title="api.models.Room"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.models.Room</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.room.views.RoomIndexView.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'room/list.html'</em><a class="headerlink" href="#dashboard.room.views.RoomIndexView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-dashboard.room">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dashboard.room" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Inventory</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, selvianl.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dashboard.room.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

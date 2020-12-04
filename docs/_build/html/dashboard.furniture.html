@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dashboard.furniture package &#8212; Inventory 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="dashboard-furniture-package">
+<h1>dashboard.furniture package<a class="headerlink" href="#dashboard-furniture-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dashboard.furniture.migrations.html">dashboard.furniture.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dashboard.furniture.migrations.html#module-dashboard.furniture.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.furniture.models">
+<span id="dashboard-furniture-models-module"></span><h2>dashboard.furniture.models module<a class="headerlink" href="#module-dashboard.furniture.models" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.furniture.urls">
+<span id="dashboard-furniture-urls-module"></span><h2>dashboard.furniture.urls module<a class="headerlink" href="#module-dashboard.furniture.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-dashboard.furniture.views">
+<span id="dashboard-furniture-views-module"></span><h2>dashboard.furniture.views module<a class="headerlink" href="#module-dashboard.furniture.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="dashboard.furniture.views.FurnitureIndexView">
+<em class="property">class </em><code class="sig-prename descclassname">dashboard.furniture.views.</code><code class="sig-name descname">FurnitureIndexView</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="dashboard.html#dashboard.views.BaseIndexView" title="dashboard.views.BaseIndexView"><code class="xref py py-class docutils literal notranslate"><span class="pre">dashboard.views.BaseIndexView</span></code></a></p>
+<dl class="py attribute">
+<dt id="dashboard.furniture.views.FurnitureIndexView.filter_by">
+<code class="sig-name descname">filter_by</code><em class="property"> = 'building__furnitures__name'</em><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView.filter_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.furniture.views.FurnitureIndexView.filter_tag">
+<code class="sig-name descname">filter_tag</code><em class="property"> = 'name'</em><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView.filter_tag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dashboard.furniture.views.FurnitureIndexView.get_context_data">
+<code class="sig-name descname">get_context_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView.get_context_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the context for this view.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.furniture.views.FurnitureIndexView.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="api.html#api.models.Furniture" title="api.models.Furniture"><code class="xref py py-class docutils literal notranslate"><span class="pre">api.models.Furniture</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dashboard.furniture.views.FurnitureIndexView.template_name">
+<code class="sig-name descname">template_name</code><em class="property"> = 'furniture/list.html'</em><a class="headerlink" href="#dashboard.furniture.views.FurnitureIndexView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Inventory</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, selvianl.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/dashboard.furniture.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
